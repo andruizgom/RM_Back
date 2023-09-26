@@ -18,7 +18,7 @@ const UserModel = require('./models/User');
 const sequelize = new Sequelize(
    // URL
    DB_DEPLOY,
-   { logging: false, native: false }
+   { logging: false, native: false, dialectOptions: {ssl: {require: true}}}
 );
 // EJERCICIO 05
 // Debajo de este comentario puedes ejecutar la función de los modelos.
